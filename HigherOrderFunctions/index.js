@@ -10,7 +10,7 @@
 // console.log(letAdamLogin());
 
 
-// Exemple 1
+// Example 1
 function giveAccessTo(name) {
     return `Access granted to ${name}`;
 }
@@ -41,7 +41,7 @@ console.log(letPerson({ name: 'Adam', level: 'user' }, authenticate));
 console.log(letPerson({ name: 'Eve', level: 'admin' }, sing));
 
 
-// Exemple 2
+// Example 2
 const multiply = num1 => num2 => num1 * num2;
 
 const multiplyByTen = multiply(10);
