@@ -8,5 +8,6 @@ This project built follwing the tutorial in Udemy <a href="https://www.udemy.com
 
 <ol>
     <li><a href="/HigherOrderFunctions/">Higher Order Functions</a></li>
-    <li><a href="/Closure/">Higher Order Functions</a></li>
+    <li><a href="/Closure/">Closure</a></li>
+    <li><a href="/Inheritance/">Inheritance</a></li>
 </ol>
