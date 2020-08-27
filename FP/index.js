@@ -108,3 +108,20 @@ const multiplication = a => b => c => a * b * c;
 const partialMultiplicationBy5 = multiplication.bind(null, 5);
 partialMultiplicationBy5(4, 10);
 
+
+// Memoization
+function addTo80(n) {
+    // Takes a long time...
+    return n + 80;
+};
+
+let cache = {};
+function memoizationAddTo80() {
+    if (n in cache) {
+        return cache[n];
+    } else {
+        // Long time...
+        cache[n] = n + 80;
+        return cache[n];
+    }
+}
