@@ -76,3 +76,21 @@ function clone(obj) {
 }
 
 const newObjClone = clone(obj);
+
+
+// HOF
+const hof = () => () => 5;
+const hof2 = fn => fn(5);
+hof2(function a(x) { return x }); // 5
+
+// Closure
+const closure = () => {
+    let count = 0;
+
+    return () => {
+        count++;
+        return count;
+    };
+};
+
+console.log(closure()());
