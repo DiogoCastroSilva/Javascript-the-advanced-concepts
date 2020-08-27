@@ -55,3 +55,14 @@ notGood(3);
 // Will always return the same
 good(3); // 6
 good(3); // 6
+
+
+// Imperative & Declarative
+
+// Imperative
+for (let i = 0; i < 1000; i++) {
+    console.log(i);
+}
+
+// Declarative
+Array(1000).fill(null).map((_, index) => index).forEach(item => console.log(item));
