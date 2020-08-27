@@ -7,5 +7,11 @@ function mutateArray(arr) {
     arr.pop();
 }
 
+function mutateArray2(arr) {
+    arr.forEach(num => {
+        arr.push(1);
+    });
+}
+
 mutateArray(array);
 console.log(array);
