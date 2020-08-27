@@ -94,3 +94,8 @@ const closure = () => {
 };
 
 console.log(closure()());
+
+// Currying
+const multiply = a => b => a * b;
+const multiplyByThree = multiply(3);
+console.log(multiplyByThree(4)); // 12
