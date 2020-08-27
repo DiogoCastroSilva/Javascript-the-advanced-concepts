@@ -37,3 +37,21 @@ function multiplyBy2(arr) {
 removeLastItem(pureArray);
 console.log(pureArray); // [1, 2, 3, 4, 5, 6] --> Dind't change the original array
 multiplyBy2(pureArray); // [1, 2, 3, 4, 5, 6] --> Dind't change the original array
+
+
+// Idempotence --> Making the code predictable
+function notGood(num) {
+    return Math.random(num);
+}
+
+function good(num) {
+    return num * 2;
+}
+
+// This will have two diferent outputs - NOT PURE
+notGood(3);
+notGood(3);
+
+// Will always return the same
+good(3); // 6
+good(3); // 6
