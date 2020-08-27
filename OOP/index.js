@@ -59,3 +59,11 @@ console.log(dolby);
 
 const shrek = new Ogre('Shrek', 'club', 'green');
 console.log(shrek);
+
+console.log(Ogre.prototype.isPrototypeOf(shrek)); // true
+console.log(Character.prototype.isPrototypeOf(Ogre.prototype)); // true
+
+console.log(shrek instanceof Ogre); // true
+console.log(shrek instanceof Character); // true
+console.log(dolby instanceof Ogre); // false
+console.log(dolby instanceof Character); // true
