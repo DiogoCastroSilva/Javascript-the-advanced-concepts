@@ -41,12 +41,20 @@ class Elf extends Character {
         super(name, weapon);
         this.type = type;
     }
+
+    attack(cry) {
+        return `Attack with ${cry}`;
+    }
 }
 
 class Ogre extends Character {
     constructor(name, weapon, color) {
         super(name, weapon);
         this.color = color;
+    }
+
+    attack() {
+        return `arghhhhh`;
     }
 
     makeFort() {
@@ -56,9 +64,11 @@ class Ogre extends Character {
 
 const dolby = new Elf('Dolby', 'cloth', 'house');
 console.log(dolby);
+console.log(dolby.attack('weee'));
 
 const shrek = new Ogre('Shrek', 'club', 'green');
 console.log(shrek);
+console.log(shrek.attack());
 
 console.log(Ogre.prototype.isPrototypeOf(shrek)); // true
 console.log(Character.prototype.isPrototypeOf(Ogre.prototype)); // true
