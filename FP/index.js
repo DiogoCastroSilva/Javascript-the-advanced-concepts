@@ -99,3 +99,12 @@ console.log(closure()());
 const multiply = a => b => a * b;
 const multiplyByThree = multiply(3);
 console.log(multiplyByThree(4)); // 12
+
+// Partial Application -> Similiar to currying
+// Comparing
+//   Currying
+const multiplication = a => b => c => a * b * c;
+//   Partial Application
+const partialMultiplicationBy5 = multiplication.bind(null, 5);
+partialMultiplicationBy5(4, 10);
+
