@@ -66,3 +66,13 @@ for (let i = 0; i < 1000; i++) {
 
 // Declarative
 Array(1000).fill(null).map((_, index) => index).forEach(item => console.log(item));
+
+
+// Imutability
+const obj = { name: 'Diogo' };
+
+function clone(obj) {
+    return { ...obj };
+}
+
+const newObjClone = clone(obj);
