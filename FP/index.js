@@ -116,7 +116,7 @@ function addTo80(n) {
 };
 
 let cache = {};
-function memoizationAddTo80() {
+function memoizationAddTo80(n) {
     if (n in cache) {
         return cache[n];
     } else {
@@ -125,3 +125,33 @@ function memoizationAddTo80() {
         return cache[n];
     }
 }
+
+// Memoization & Closure
+function memoizationClosureAddTo80() {
+    let cache = {};
+    return (n) => {
+        if (n in cache) {
+            return cache[n];
+        } else {
+            // Long time...
+            cache[n] = n + 80;
+            return cache[n];
+        }
+    };
+}
+
+
+// Compose & Pipe
+// Compose
+const makePositive = n => Math.abs(n);
+
+const compose = (fn1, fn0) => data => fn1(fn0(data));
+
+const multiplyByThreeAndAbsolute = compose(multiplyByThree, makePositive);
+console.log(multiplyByThree(-6)); // 18
+
+// Pipe --> Inverse of pipe
+const pipe = (fn0, fn1) => data => fn0(fn1(data));
+
+
+// Arity -> number of arguments a function take
