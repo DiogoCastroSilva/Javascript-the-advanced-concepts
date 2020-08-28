@@ -55,3 +55,55 @@ Promise.all(urls.map(url => {
 }).catch(error => {
     console.log(error);
 });
+
+
+// Async/Await
+// Uses Promise's under the wood
+// Makes the code more readable
+const movePlayer = (distance, direction) => new Promise((resolve, reject) => {
+    return resolve(`Player moved ${distance} meters to the ${direction}`);
+});
+
+const movements = [];
+
+async function playerStart() {
+    try {
+        const leftMove = await movePlayer(5, 'left');
+        movements.push(leftMove);
+
+        const rightMove = await movePlayer(10, 'right');
+        movements.push(rightMove);
+
+        const frontMove = await movePlayer(15, 'front');
+        movements.push(frontMove);
+    } catch(e) {
+        console.log('An error occurred', e);
+    } finally {
+        console.log(`Player movements: ${movements}`);
+    }
+}
+
+playerStart();
+
+// Real world Async/Await
+async function fetchUsers() {
+    const resp = await fetch(urls[0]);
+    const users = await resp.json();
+    console.log(users);
+}
+
+fetchUsers();
+
+const getData = async function() {
+    try {
+        const [users, posts, albums] = await Promise.all(urls.map(url => {
+            fetch(url).then(resp => resp.json());
+        }));
+    
+        console.log('users:', users);
+        console.log('posts:', posts);
+        console.log('albums:', albums);
+    } catch(e) {
+        console.log('Error:', e);
+    }
+};

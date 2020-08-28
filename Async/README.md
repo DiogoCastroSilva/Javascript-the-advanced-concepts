@@ -17,13 +17,13 @@ Using promises, we can write asynchronous programs in a more manageable way. Usi
         .finally( finallyCallback );
 ````
 
-### Async
+### Async / Await
 
 ````javascript
     async function myFunction() {
         var result = await new MyPromise();
         console.log( result );
     }
-    
+
     myFunction(); // returns a promise
 ````
