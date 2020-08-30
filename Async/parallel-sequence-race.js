@@ -19,3 +19,14 @@ async function parallel() {
 
 // Parallel --> Runs all the promises at the same time, if one fails all fails
 parallel().then(console.log);
+
+
+
+async function race() {
+    const promises = [a(), b(), c()];
+    const output1 = await Promise.race(promises);
+    return `Race is done: ${output1}`;
+}
+
+// Race --> Return the fastest promise to be completed
+race().then(console.log);
