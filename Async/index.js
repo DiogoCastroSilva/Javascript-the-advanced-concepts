@@ -123,3 +123,13 @@ Promise.resolve('hi').then(data => console.log('2', data));
 
 // 3
 console.log('3', 'is a crowd');
+
+
+
+// Workers
+var worker = new Worker('parallel-sequence-race.js');
+worker.postMessage('Hellooo');
+
+addEventListener('message', (data) => {
+    console.log(data);
+});
