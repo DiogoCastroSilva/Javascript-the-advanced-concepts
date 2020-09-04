@@ -14,4 +14,5 @@ This project built follwing the tutorial in Udemy <a href="https://www.udemy.com
     <li><a href="/FP/">Functional Programming</a></li>
     <li><a href="/Async/">Async</a></li>
     <li><a href="/Modules/">Modules</a></li>
+    <li><a href="/Error/">Error Handling</a></li>
 </ol>
