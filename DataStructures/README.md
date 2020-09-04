@@ -18,3 +18,10 @@ There are eight basic data types in JavaScript.
     <li>Object</li>
     <li>Symbol</li>
 </ol>
+
+## Data Structure
+
+<ol>
+    <li>Arrays</li>
+    <li>Hash Table</li>
+</ol>
